@@ -20,7 +20,7 @@
 		
 		<textarea type="text" placeholder="Enter Project Description" th:field="${project.description}"></textarea>
 		
-		<select id="employees" name="employees">
+		<select id="employees" name="employees" multiple="multiple">
 		<option th:each = "i : ${allEmployees}"
 				th:value="${i.employeeId}"
 				th:text="${i.firstName}">

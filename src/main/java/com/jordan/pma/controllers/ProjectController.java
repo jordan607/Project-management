@@ -45,13 +45,13 @@ public class ProjectController {
 		//handles saving to db
 		proRepo.save(project);
 		
-		Iterable<Employee>projectEmployee = empRepo.findAllById(employees);
 		
 		//projectEmployee.forEach(p->System.out.println(p.getFirstName()));
-		for(Employee emp : projectEmployee) {
-			emp.setTheProject(project);
-			empRepo.save(emp);
-		}
+//		Iterable<Employee>projectEmployee = empRepo.findAllById(employees);	
+//		for(Employee emp : projectEmployee) {
+//			emp.setTheProject(project);
+//			empRepo.save(emp);
+//		}
 		
 		//use a redirect to prevent duplicate submissions
 		return "redirect:/projects/new";
