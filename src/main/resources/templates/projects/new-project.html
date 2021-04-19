@@ -20,6 +20,13 @@
 		
 		<textarea type="text" placeholder="Enter Project Description" th:field="${project.description}"></textarea>
 		
+		<select id="employees" name="employees">
+		<option th:each = "i : ${allEmployees}"
+				th:value="${i.employeeId}"
+				th:text="${i.firstName}">
+		</option>
+		</select>
+				
 		<button type="submit">Create Project</button>
 		
 		</form>

@@ -18,30 +18,8 @@
 		<button type="submit">Add Employee</button>
 		
 		</form>
-	</div>
-	<hr>
-	<div>
-	<h4> Employees</h4>
-	<table>
-	<thead>
-	<tr>
-		<th>Employee First Name</th>
-		<th>Employee Last Name</th>	
-		<th>Employee Email</th>	
-	</tr>
-	</thead>
-	<tbody>
-	<tr th:each ="aemployee : ${employee}">
-		<td th:text = "${aemployee.firstName}"></td>
-		<td th:text = "${aemployee.lastName}"></td>
-		<td th:text = "${aemployee.email}"></td>
-	</tr>
-	</tbody>
-	
-	</table>
-	
-</div>
-	
+
+
 </body>
 
 </html>

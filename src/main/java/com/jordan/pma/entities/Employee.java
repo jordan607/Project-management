@@ -1,24 +1,45 @@
 package com.jordan.pma.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long employeeId;
+	private int employeeId;
 	
 	private String firstName;
 	private String lastName;
 	private String email;
 	
 	
+	@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.MERGE}
+			, fetch = FetchType.LAZY)
+	@JoinColumn(name = "project_id")
+	private Project theProject;
+	
+	public long getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
 	public Employee() {
 		
+	}
+	public Project getTheProject() {
+		return theProject;
+	}
+	public void setTheProject(Project theProject) {
+		this.theProject = theProject;
 	}
 	public Employee(String firstName, String lastName, String email) {
 		super();
@@ -26,12 +47,7 @@ public class Employee {
 		this.lastName = lastName;
 		this.email = email;
 	}
-	public long getEmployeeId() {
-		return employeeId;
-	}
-	public void setEmployeeId(long employeeId) {
-		this.employeeId = employeeId;
-	}
+
 	public String getFirstName() {
 		return firstName;
 	}
