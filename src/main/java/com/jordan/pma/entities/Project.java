@@ -22,6 +22,13 @@ public class Project {
 	private long projectId;
 	
 	private String name;
+	public Project(String name, String stage, String description) {
+		super();
+		this.name = name;
+		this.stage = stage;
+		this.description = description;
+	}
+
 	private String stage;
 	private String description;
 
