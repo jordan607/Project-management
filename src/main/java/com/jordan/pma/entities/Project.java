@@ -19,7 +19,8 @@ import javax.persistence.OneToMany;
 public class Project {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+//	@GeneratedValue(strategy = GenerationType.AUTO)  Id creation is handeled by java(JPA/hibernate)
+	@GeneratedValue(strategy=GenerationType.IDENTITY) // Id creation is handeled by db
 	private long projectId;
 	
 	private String name;
