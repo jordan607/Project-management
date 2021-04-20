@@ -1,5 +1,6 @@
 package com.jordan.pma.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -84,6 +85,12 @@ public class Project {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public void addEmployee(Employee emp1) {
+		if(employees==null)
+			employees=new ArrayList<>();
+		 employees.add(emp1);
 	}
 	
 }

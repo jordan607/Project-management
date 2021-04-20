@@ -55,13 +55,13 @@ public class ProjectManagementApplication {
 				// need to set both sides of the relationship manually
 
 				
-				
-				pro1.setEmployees(Arrays.asList(emp1));
-				pro1.setEmployees(Arrays.asList(emp2));
-				pro2.setEmployees(Arrays.asList(emp3));
-				pro3.setEmployees(Arrays.asList(emp1));
-				pro4.setEmployees(Arrays.asList(emp1));
-				pro4.setEmployees(Arrays.asList(emp3));
+				pro1.addEmployee(emp1);
+				pro1.addEmployee(emp2);
+				pro2.addEmployee(emp3);
+				pro3.addEmployee(emp1);
+				pro4.addEmployee(emp1);
+				pro4.addEmployee(emp3);
+
 
 				
 				// need to set both sides of the relationship manually
