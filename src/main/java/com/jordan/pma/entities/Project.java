@@ -20,7 +20,7 @@ public class Project {
 	
 	@Id
 //	@GeneratedValue(strategy = GenerationType.AUTO)  Id creation is handeled by java(JPA/hibernate)
-	@GeneratedValue(strategy=GenerationType.IDENTITY) // Id creation is handeled by db
+	@GeneratedValue(strategy=GenerationType.IDENTITY) // Id creation is handeled by db --> (con) -> we loose hybernate batching feature
 	private long projectId;
 	
 	private String name;

@@ -7,13 +7,18 @@
 <body>
 <nav th:replace="layouts :: navbar"></nav>
 
-<center>
+
 </br>
-<div>
+<div class="container">
+<h3> Main Dashboard<h3>
+<hr>
 	<h4> Current Projects</h4>
+<div class="row">
+	<div class="col-md-6">
+
 	</br>
-	<table>
-	<thead>
+	<table class= "table-bordered table-striped">
+	<thead class="thead-dark">
 	<tr>
 		<th>Project Name</th>
 		<th>Project Stage</th>	
@@ -27,22 +32,33 @@
 	</tbody>
 	
 	</table>
+	</div>
+	
+	
+
+
+<div class="col-md-4">
+	<canvas id = "myPieChart" height="50" width="50"></canvas>
 	
 </div>
+</div>
+</div>	
 </br>
 
-<hr>
+
 
 </br>
-
-<div>
+<div class="container">
 	<h4> Employees</h4>
+<div class="row">
+	<div class="col-md-6">
+
 	</br>
-	<table>
-	<thead>
+	<table class= "table-bordered table-striped">
+	<thead class="thead-dark">
 	<tr>
-		<th>Employee First Name  |</th>
-		<th>Employee Last Name  |</th>	
+		<th>Employee First Name  </th>
+		<th>Employee Last Name  </th>	
 		<th>Employee Email  </th>	
 	</tr>
 	</thead>
@@ -55,7 +71,12 @@
 	</tbody>
 	
 	</table>
+	</div>
 	
 </div>
+</div>
+
+
+<script type = "text/javascript" th:src="@{js/myChart.js}"></script>
 
 </body>
