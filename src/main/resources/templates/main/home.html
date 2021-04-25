@@ -40,6 +40,10 @@
 <div class="col-md-4">
 	<canvas id = "myPieChart" height="50" width="50"></canvas>
 	
+	<script>
+	 var chartData = "[[${projectChart}]]"
+	</script>
+	
 </div>
 </div>
 </div>	
@@ -60,6 +64,7 @@
 		<th>Employee First Name  </th>
 		<th>Employee Last Name  </th>	
 		<th>Employee Email  </th>	
+		<th>Project Count </th>
 	</tr>
 	</thead>
 	<tbody>
@@ -67,6 +72,7 @@
 		<td th:text = "${aemployee.firstName}"></td>
 		<td th:text = "${aemployee.lastName}"></td>
 		<td th:text = "${aemployee.email}"></td>
+		<td th:text = "*{aemployee.projectCount}"></td>
 	</tr>
 	</tbody>
 	
@@ -78,5 +84,7 @@
 
 
 <script type = "text/javascript" th:src="@{js/myChart.js}"></script>
+<br>
+<br>
 
 </body>
