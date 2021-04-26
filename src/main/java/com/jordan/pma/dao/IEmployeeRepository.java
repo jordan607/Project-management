@@ -12,7 +12,7 @@ public interface IEmployeeRepository extends JpaRepository<Employee, Integer>{
 
 	@Query(nativeQuery=true, value= "select e.first_name as firstname, e.last_name as lastName, e.email as email, count(pe.employee_id) as projectCount "
 			+ "from employee e left join project_employee pe on pe.employee_id = e.employee_id "
-			+ "Group by e.first_name, e.last_name order by 4 desc"
+			+ "Group by e.first_name, e.last_name, e.email order by 4 desc"
 			)
 	public List<EmployeeProject> employeeProjects();
 

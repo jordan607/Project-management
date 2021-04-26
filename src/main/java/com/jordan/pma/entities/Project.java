@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 
 
 @Entity
@@ -20,7 +21,8 @@ public class Project {
 	
 	@Id
 //	@GeneratedValue(strategy = GenerationType.AUTO)  Id creation is handeled by java(JPA/hibernate)
-	@GeneratedValue(strategy=GenerationType.IDENTITY) // Id creation is handeled by db --> (con) -> we loose hybernate batching feature
+	@SequenceGenerator(name="project_seq", sequenceName="project_seq", allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "project_seq") // Id creation is handeled by db --> (con) -> we loose hybernate batching feature
 	private long projectId;
 	
 	private String name;
