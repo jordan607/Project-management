@@ -14,23 +14,25 @@ import com.jordan.pma.dao.IEmployeeRepository;
 import com.jordan.pma.dao.IProjectRepository;
 import com.jordan.pma.entities.Employee;
 import com.jordan.pma.entities.Project;
+import com.jordan.pma.service.EmployeeService;
+import com.jordan.pma.service.ProjectService;
 
 @Controller
 @RequestMapping("/projects")
 public class ProjectController {
 	
 	@Autowired
-	IProjectRepository proRepo;
+	ProjectService proSer;
 	
 	@Autowired
-	IEmployeeRepository empRepo;
+	EmployeeService empSer;
 	
 	@GetMapping("/new")
 	public String displayProjectForm(Model model) {
 		
 		Project aProject = new Project();
 		
-		List<Employee> employees = empRepo.findAll();
+		List<Employee> employees = empSer.getAll();
 		//System.out.println(employees.get(0));
 		model.addAttribute("project", aProject);
 		model.addAttribute("allEmployees", employees);
@@ -43,7 +45,7 @@ public class ProjectController {
 	@PostMapping("/save")
 	public String createProject(Project project,@RequestParam List<Integer> employees ,Model model) {
 		//handles saving to db
-		proRepo.save(project);
+		proSer.save(project);
 		
 		
 		//projectEmployee.forEach(p->System.out.println(p.getFirstName()));

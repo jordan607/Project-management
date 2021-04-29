@@ -17,6 +17,8 @@ import com.jordan.pma.dto.EmployeeProject;
 import com.jordan.pma.dto.ProjectChart;
 import com.jordan.pma.entities.Employee;
 import com.jordan.pma.entities.Project;
+import com.jordan.pma.service.EmployeeService;
+import com.jordan.pma.service.ProjectService;
 
 @Controller
 
@@ -24,23 +26,23 @@ import com.jordan.pma.entities.Project;
 public class HomeController {
 	
 	@Autowired
-	IProjectRepository proRepo;
+	ProjectService proSer;
 	
 	@Autowired
-	IEmployeeRepository empRepo;
+	EmployeeService empSer;
 	
 	@RequestMapping("/")
 	public String home(Model model) throws JsonProcessingException {
 		Map <String, Object> map = new HashMap<String, Object>();
 		
-		List<Project> projects = proRepo.findAll();
-		List<EmployeeProject> employee = empRepo.employeeProjects();
+		List<Project> projects = proSer.getAll();
+		List<EmployeeProject> employee = empSer.employeeProjects();
 		
 		model.addAttribute("projects", projects);
 		model.addAttribute("employee", employee);
 		
 		
-		List<ProjectChart> chartData = proRepo.projectCount();
+		List<ProjectChart> chartData = proSer.getProjectCount();
 		
 		//converting projectchart data into json structure for use in js.
 		ObjectMapper objectMapper = new ObjectMapper();
