@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import com.jordan.pma.dto.EmployeeProject;
 import com.jordan.pma.entities.Employee;
 
+@Repository
 public interface IEmployeeRepository extends JpaRepository<Employee, Integer>{
 
 	@Query(nativeQuery=true, value= "select e.first_name as firstname, e.last_name as lastName, e.email as email, count(pe.employee_id) as projectCount "
