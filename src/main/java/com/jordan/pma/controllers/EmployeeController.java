@@ -11,28 +11,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.jordan.pma.dao.IEmployeeRepository;
 import com.jordan.pma.entities.Employee;
+import com.jordan.pma.service.EmployeeService;
 
 @Controller
 @RequestMapping("/employee")
 public class EmployeeController {
 	
 	@Autowired
-	IEmployeeRepository empRepo;
+	EmployeeService empSer;
 	
 	@GetMapping("/new")
 	public String displayEmployeeForm(Model model) {
 		
-		
-		
 		model.addAttribute("employee", new Employee());
-		
 		return "employees/new-employee";
 	}
 	
 	@PostMapping("/save")
 	public String addEmployee(Employee emp) {
 		
-		empRepo.save(emp);
+		empSer.save(emp);
 		
 		return "redirect:/employee/new";
 	}
