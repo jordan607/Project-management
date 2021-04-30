@@ -1,0 +1,92 @@
+2021-04-30 10:53:52.318  INFO 22032 --- [restartedMain] c.j.pma.ProjectManagementApplication     : Starting ProjectManagementApplication using Java 15.0.2 on LEGION-SCOUEP14 with PID 22032 (E:\Spring\project-management\target\classes started by Vishal sepaia in E:\Spring\project-management)
+2021-04-30 10:53:52.318 DEBUG 22032 --- [restartedMain] c.j.pma.ProjectManagementApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-30 10:53:52.318  INFO 22032 --- [restartedMain] c.j.pma.ProjectManagementApplication     : The following profiles are active: test
+2021-04-30 10:53:52.414  INFO 22032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-30 10:53:52.422  INFO 22032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2021-04-30 10:53:52.485  INFO 22032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 10:53:52.508  INFO 22032 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 188 ms
+2021-04-30 10:53:52.521  INFO 22032 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:project'
+2021-04-30 10:53:52.558  INFO 22032 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30 10:53:52.567  INFO 22032 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-30 10:53:52.628  WARN 22032 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-30 10:53:52.651  INFO 22032 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 10:53:52.672  WARN 22032 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-04-30 10:53:52.694  INFO 22032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 10:53:52.697  INFO 22032 --- [restartedMain] c.j.pma.ProjectManagementApplication     : Started ProjectManagementApplication in 0.412 seconds (JVM running for 649.1)
+2021-04-30 10:53:52.697  INFO 22032 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-30 10:53:59.978  INFO 22032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 10:53:59.979  INFO 22032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 10:53:59.980 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+ 
+
+2021-04-30 10:53:59.981 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ***************Before Method Execution********** 
+ com.jordan.pma.controllers.HomeController.home () with arguments [s]=[{}]
+2021-04-30 10:53:59.981 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ------------------------------------------------
+
+
+2021-04-30 10:53:59.984 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+ 
+
+2021-04-30 10:53:59.984 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ***************Before Method Execution********** 
+ com.jordan.pma.service.ProjectService.getAll () with arguments [s]=[]
+2021-04-30 10:53:59.984 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ------------------------------------------------
+
+
+2021-04-30 10:53:59.989 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ***************After Method Execution********** 
+ com.jordan.pma.service.ProjectService.getAll () with arguments [s]=[]
+2021-04-30 10:53:59.989 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ------------------------------------------------
+
+
+2021-04-30 10:53:59.989 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+ 
+
+2021-04-30 10:53:59.989 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ***************Before Method Execution********** 
+ com.jordan.pma.service.EmployeeService.employeeProjects () with arguments [s]=[]
+2021-04-30 10:53:59.989 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ------------------------------------------------
+
+
+2021-04-30 10:53:59.992 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ***************After Method Execution********** 
+ com.jordan.pma.service.EmployeeService.employeeProjects () with arguments [s]=[]
+2021-04-30 10:53:59.992 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ------------------------------------------------
+
+
+2021-04-30 10:53:59.992 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+ 
+
+2021-04-30 10:53:59.992 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ***************Before Method Execution********** 
+ com.jordan.pma.service.ProjectService.getProjectCount () with arguments [s]=[]
+2021-04-30 10:53:59.992 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ------------------------------------------------
+
+
+2021-04-30 10:53:59.993 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ***************After Method Execution********** 
+ com.jordan.pma.service.ProjectService.getProjectCount () with arguments [s]=[]
+2021-04-30 10:53:59.993 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ------------------------------------------------
+
+
+2021-04-30 10:53:59.993 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ***************After Method Execution********** 
+ com.jordan.pma.controllers.HomeController.home () with arguments [s]=[{projects=[], employee=[], projectChart=[]}]
+2021-04-30 10:53:59.993 DEBUG 22032 --- [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : ------------------------------------------------
+
+
+2021-04-30 10:55:04.940  INFO 22032 --- [Thread-24] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 10:55:04.940  INFO 22032 --- [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30 10:55:05.153  WARN 22032 --- [Thread-24] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-04-30 10:55:05.213  INFO 22032 --- [restartedMain] c.j.pma.ProjectManagementApplication     : Starting ProjectManagementApplication using Java 15.0.2 on LEGION-SCOUEP14 with PID 22032 (E:\Spring\project-management\target\classes started by Vishal sepaia in E:\Spring\project-management)
+2021-04-30 10:55:05.213 DEBUG 22032 --- [restartedMain] c.j.pma.ProjectManagementApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-30 10:55:05.213  INFO 22032 --- [restartedMain] c.j.pma.ProjectManagementApplication     : The following profiles are active: test
+2021-04-30 10:55:05.308  INFO 22032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-30 10:55:05.315  INFO 22032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2021-04-30 10:55:05.377  INFO 22032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 10:55:05.399  INFO 22032 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 185 ms
+2021-04-30 10:55:05.412  INFO 22032 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:project'
+2021-04-30 10:55:05.448  INFO 22032 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30 10:55:05.457  INFO 22032 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-30 10:55:05.514  WARN 22032 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-30 10:55:05.537  INFO 22032 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 10:55:05.560  WARN 22032 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-04-30 10:55:05.584  INFO 22032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 10:55:05.586  INFO 22032 --- [restartedMain] c.j.pma.ProjectManagementApplication     : Started ProjectManagementApplication in 0.394 seconds (JVM running for 721.99)
+2021-04-30 10:55:05.588  INFO 22032 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-30 10:56:23.658  INFO 22032 --- [Thread-29] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 10:56:23.659  INFO 22032 --- [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30 10:56:23.861  WARN 22032 --- [Thread-29] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
