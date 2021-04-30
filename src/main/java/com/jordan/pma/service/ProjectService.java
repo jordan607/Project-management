@@ -25,6 +25,7 @@ public class ProjectService {
 	
 	public List<ProjectChart> getProjectCount(){
 		return proRepo.projectCount();
+		
 	}
 	
 }
