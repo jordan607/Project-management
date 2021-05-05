@@ -12,8 +12,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
@@ -23,6 +24,7 @@ public class Project {
 //	@GeneratedValue(strategy = GenerationType.AUTO)  Id creation is handeled by java(JPA/hibernate)
 	@SequenceGenerator(name="project_seq", sequenceName="project_seq", allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "project_seq") // Id creation is handeled by db --> (con) -> we loose hybernate batching feature
+	@JsonIgnore
 	private long projectId;
 	
 	private String name;
